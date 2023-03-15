@@ -17,12 +17,12 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
-    conn.write('Name:JJK'); // send to server type Name: JJK
-  })
+    conn.write('Name:JJK'); // send to server 
+  });
 
-  // process.stdin.on('data', (userInput) => {
-  //   client.write(userInput); // Send to server.
-  // });
+  process.stdin.on('data', (input) => {
+    setInterval(process.stdin.on(input), 300);
+  });
 
   return conn;
 };
