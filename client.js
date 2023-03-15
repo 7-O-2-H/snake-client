@@ -8,9 +8,21 @@ const connect = function () {
 
   conn.setEncoding("utf8");
 
+  conn.on("connect", () => {
+    console.log('Successfully connected to server');
+  });
+
   conn.on('data', (serverData) => {
     console.log(serverData);
   });
+
+  conn.on("connect", () => {
+    conn.write('Name:JJK'); // send to server type Name: JJK
+  })
+
+  // process.stdin.on('data', (userInput) => {
+  //   client.write(userInput); // Send to server.
+  // });
 
   return conn;
 };
