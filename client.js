@@ -20,9 +20,9 @@ const connect = function () {
     conn.write('Name:JJK'); // send to server 
   });
 
-  process.stdin.on('data', (input) => {
-    setInterval(process.stdin.on(input), 300);
-  });
+  // process.stdin.on('data', (input) => {
+  //   setInterval(process.stdin.on(input), 300);
+  // });
 
   return conn;
 };
