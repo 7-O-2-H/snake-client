@@ -5,16 +5,24 @@ const handleUserInput = function (key) {
     process.exit();
   }
   if (key === 'w') {
-    connection.write('Move: up');
-  }
+    setInterval(() => {
+      connection.write('Move: up');
+    }, 200);
+  };
   if (key === 'a') {
-    connection.write('Move: left');
-  }
+    setInterval(() => {
+      connection.write('Move: left');
+    }, 200);
+  };
   if (key === 's') {
-    connection.write('Move: down');
+    setInterval(() => {
+      connection.write('Move: down');
+    }, 200);
   }
   if (key === 'd') {
-    connection.write('Move: right');
+    setInterval(() => {
+      connection.write('Move: right');
+    }, 200);
   }
   if (key === 't') {
     connection.write('Say: Nommin');
